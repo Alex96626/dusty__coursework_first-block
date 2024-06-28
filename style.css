@@ -29,7 +29,7 @@
 @font-face {
     font-family: "Satoshi";
     font-style: normal;
-    font-weight: 100;
+    font-weight: 300;
     font-display: swap;
     src: local("Satoshi"),
          url("./fonts/Satoshi-Light.woff2") format("woff2"),
@@ -51,7 +51,7 @@
 @font-face {
     font-family: "Satoshi";
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-display: swap;
     src: local("Satoshi"),
          url("./fonts/Satoshi-Medium.woff") format("woff2"),
@@ -62,7 +62,7 @@
 @font-face {
     font-family: "Satoshi";
     font-style: normal;
-    font-weight: 900;
+    font-weight: 700;
     font-display: swap;
     src: local("Satoshi"),
          url("./fonts/Satoshi-Bold.woff2") format("woff2"),
@@ -78,6 +78,7 @@
     margin: 0 auto;
 
     font-family: 'Satoshi', Arial, sans-serif ;
+    background-color: #fff;
 }
 
 .header {
@@ -145,7 +146,7 @@
     top: 0;
 
     content: '';
-    
+
     display: block;
     box-sizing: border-box;
     width: 13px;
@@ -154,4 +155,68 @@
     border-radius: 100px 0 0 100px;
 
     background: #050f27e6;
+}
+
+/*craft-dwelling */
+
+.craft-dwelling {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, ()) ;
+}
+
+.craft-dwelling__subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: #050f27;
+}
+
+
+.craft-dwelling__title_primary {
+    margin-top: 8px;
+
+    font-weight: 700;
+    font-size: 71px;
+    line-height: 118%;
+    color: #050f27;
+}
+
+.craft-dwelling__secondary {
+    margin-top: 29px;
+
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 112%;
+    letter-spacing: -0.02em;
+    color: #191623;
+}
+
+.craft-dwelling__button {
+
+    padding: 25px 50px;
+
+    border: none;
+    border-radius: 26px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.33;
+    color: #fff;
+
+    background: #050f27;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 153px;
+    line-height: 1.07;
+    letter-spacing: -0.04em;
+    color: #050f27; 
+}
+
+.craft-dwelling__image {
+    border-radius: 56px;
+
+    overflow: hidden;
 }
