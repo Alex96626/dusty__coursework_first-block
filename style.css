@@ -67,7 +67,7 @@
 .page {
   box-sizing: border-box;
   max-width: 1920px;
-  min-width: 992px;
+  min-width: 1200px;
   margin: 0 auto;
   padding: 42px 60px 80px 60px;
 
@@ -132,6 +132,8 @@
   background: #050f27;
 
   cursor: pointer;
+
+
 }
 
 .contact-us::after {
@@ -156,46 +158,50 @@
 .craft-dwelling {
 
   display: flex;
+  gap: 32px;
 
   margin-top: 43px;
 }
 
 .craft-dwelling__wrapper {
-  background-color: #f7f8f8;
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
-  padding-right: 32px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: 545px;
 
   border-radius: 80px 0 80px 80px;
 
+  background-color: #f7f8f8;
+}
+
+
+.craft-dwelling__wrapper::after {
+  content: '';
+
+  position: absolute;
+  top: 435px;
+
+  width: calc(100% + 32px);
+  height: 234px;
   background-image: url('./images/bg.png');
   background-repeat: no-repeat;
-  background-position: 0% 41%;
+  background-size: cover;
 }
 
 .craft-dwelling__capital {
   position: relative;
 
   box-sizing: border-box;
-  width: 545px;
 
   padding: 94px 81px 132px 86px;
 }
 
 
-.craft-dwelling__introduction {
-  flex-shrink: 1;
-  flex-grow: 1;
-
-  position: relative;
-  box-sizing: border-box;
-  max-width: 545px;
-
-  padding: 94px 81px 132px 86px;
-}
-
-.craft-dwelling__introduction::after {
+.craft-dwelling__capital::after {
   content: ' ';
 
   position: absolute;
@@ -206,14 +212,31 @@
   height: 100%;
   width: 32px;
 
-  background: #fff;
+  background: #f7f8f8;
 }
+
+.craft-dwelling__introduction {
+  
+  position: relative;
+  box-sizing: border-box;
+  /* max-width: 545px; */
+
+  padding: 94px 81px 132px 86px;
+}
+
+
 
 .craft-dwelling__subtitle {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.01em;
+
+  overflow-wrap: anywhere;
+}
+
+.craft-dwelling__subtitle_secondary {
+  font-size: 24px;
 }
 
 .craft-dwelling__title {
@@ -245,6 +268,12 @@
   line-height: 1.64;
   letter-spacing: -0.03em;
   color: #050f27;
+
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 .craft-dwelling__button {
@@ -263,19 +292,36 @@
 }
 
 .title {
+  margin: 0;
+
   font-weight: 700;
-  font-size: 153px;
+  /* font-size: 153px; */
+  font-size: clamp(100px, 8vw, 153px);
   line-height: 1.07;
   letter-spacing: -0.04em;
   color: #050f27;
 }
 
 .craft-dwelling__image {
+  margin-top: 41px;
+
   border-radius: 56px;
 
   overflow: hidden;
 }
 
+.craft-dwelling__image_item {
+  max-width: 100%;
+}
+
 .craft-dwelling__future {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 76px 68px 46px 68px;
+
+  border-radius: 0 80px 80px 80px;
+
   background-color: #f7f8f8;
 }
