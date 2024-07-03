@@ -1,32 +1,10 @@
 :root {
-  /* --color-black-900: #000000;
-  --color-black-800: #151414;
-  --color-blue-900: #051029; */
+
   --color-blue-800: #050f27;
-  /* --color-blue-700: #191623;
-  --color-blue-600: #2a3347; */
-
- 
-
   --color-white-900: #fff;
-  --color-white-800: #ffffff0d;
-
-  --color-heading-xl: var(--color-blue-900);
-  --color-heading-l: var(--color-blue-900);
-  --color-heading-m: var(--color-blue-800);
-  --color-heading-s: var(--color-blue-900);
 
   --color-service-item-text: var(--color-blue-800);
   --color-service-item-bg: var( --color-white-900);
-
-  /* font size  */
-
-  /* --text-size-s:
-    --text-size-m:
-    --text-size-l:
-    --text-size-xl:
-
-    175 153,132 76 71 50 43 27 24 22 20 18           */
 }
 
 @font-face {
