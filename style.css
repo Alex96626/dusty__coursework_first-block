@@ -141,7 +141,7 @@
 .craft-dwelling {
 
   display: flex;
-  gap: 32px;
+  gap: 37px;
 
   margin-top: 43px;
 }
@@ -168,9 +168,9 @@
   position: absolute;
   top: 435px;
 
-  width: calc(100% + 32px);
+  width: calc(100% + 37px);
   height: 234px;
-  background-image: url('./images/bg.png');
+  background-image: url('./images/bg.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -189,11 +189,11 @@
 
   position: absolute;
   top: 0;
-  right: -32px;
+  right: -37px;
 
   box-sizing: border-box;
   height: 100%;
-  width: 32px;
+  width: 37px;
 
   background: #f7f8f8;
 }
