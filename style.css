@@ -60,7 +60,7 @@
 
 .header {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   gap: 50px;
 
@@ -81,14 +81,25 @@
   display: flex;
   gap: 20px;
 
+  height: 100%;
+
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
+
+.menu__item {
+  display: flex;
+  align-items: stretch;
+}
+
 .menu__link {
-  padding: 43px 15px;
+  display: flex;
+  align-items: center;
+  
+  padding: 0 15px;
 
   font-weight: 500;
   font-size: 18px;
@@ -153,6 +164,8 @@
   flex-grow: 0;
   flex-basis: 545px;
 
+  max-width: 545px;
+
   border-radius: 80px 0 80px 80px;
 
   background-color: #f7f8f8;
@@ -172,6 +185,8 @@
 }
 
 .craft-dwelling__capital {
+  max-width: 100%;
+
   position: relative;
 
   box-sizing: border-box;
@@ -224,6 +239,12 @@
   font-size: 71px;
   line-height: 118%;
   color: #050f27;
+
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .craft-dwelling__secondary {
@@ -280,6 +301,8 @@
 
   border-radius: 56px;
 
+  font:0/0 a;
+
   overflow: hidden;
 }
 
@@ -290,7 +313,7 @@
 .craft-dwelling__future {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 
   padding: 76px 68px 46px 68px;
 
@@ -561,6 +584,7 @@
 /* footer  */
 
 .footer {
+  margin-top: 80px;
   padding: 125px 65px 100px 100px;
 
   border-radius: 80px;
@@ -572,6 +596,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 40px;
 }
 
@@ -584,7 +609,8 @@
   margin: 0;
 
   font-weight: 500;
-  font-size: 175px;
+  /* font-size: 175px; */
+  font-size: clamp(135px, 10vw, 175px);
   line-height: 1;
   letter-spacing: -0.02em;
   color: #fff;
@@ -617,12 +643,12 @@
   background-color: #ffffff0d;
 
   cursor: pointer;
+
 }
 
 .footer__navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 40px;
 
   margin-top: 220px;
@@ -639,11 +665,26 @@
 
 .footer__menu-list {
   display: flex;
-  gap: 50px;
+  gap: 20px;
+
+  height: 100%;
+
+  margin: 0;
+
   list-style-type: none;
 }
 
+.footer__menu-item {
+  display: flex;
+  align-items: stretch;
+}
+
 .footer__menu-link {
+  display: flex;
+  align-items: center;
+
+  padding: 0 15px;
+
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
